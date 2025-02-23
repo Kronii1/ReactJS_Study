@@ -1,3 +1,25 @@
-React는
+React 규칙
 
-html과 자바스크립트가 연결된 그부분의 숏컷같은 느낌이다.
+1. HTML을 body에 직접 작성하지 않는다.
+HTML태그를 만들기위해 자바스크립트와 ReactJS를 활용한다.
+
+
+이번 강의에서는 어려운방법으로 리액트 객체를 만드는법을 배울것이다.
+이번에 다루는 리액트로 객체를 생성하는 방식은 다른 사람들이 쓰지 않는 방식이지만 어떻게 흘러가는지 구조에 대해 배운다.
+
+ReactJs는
+어플리케이션이 아주 인터렉티브하도록 만들어 주는 라이브러리 이고
+
+React-dom은
+라이브러리 또는 패키지인데
+모든 React Element들을 HTML body에 둘 수 있도록 해준다.
+
+
+render의 의미
+React element를 가지고 HTML로 만들어 배치한다는 뜻.
+
+바닐라JS는 HTML -> JS 순서
+리액트는 JS -> HTML 순서
+
+JS가 element를 생성하고 React JS가 그것을 HTML로 번역하는 것
+React JS는 업데이트 해야 하는 HTML을 업데이트 할 수 있음
