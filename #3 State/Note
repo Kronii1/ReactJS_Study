@@ -1,0 +1,30 @@
+State 란?
+기본적으로 데이터가 저장되는 곳이다.
+
+변수를 JSX에게 전달하는 방법?
+
+바닐라 JS ver
+span.innerText = `Total Click : ${counter}`
+
+JSX ver
+<h3>Total clicks : {counter}</h3>
+
+
+
+
+바닐라JS
+바닐라JS에서 HTML요소들을 검사해보면
+클릭 했을 때 구글 Chrome HTML 요소들이 업데이트가 되고 있는걸 바로 보여준다.
+
+
+ReactJS
+클릭 했을 때 HTML요소들이 업데이트 되지 않는다.
+React.Js는 UI에서 바뀐부분만 업데이트 해준다.
+바닐라JS와 달리 바뀐 부분만 업데이트를 해준다.
+
+ReactJS는
+이전에 렌더링된 컴포넌트는 어떤거였는지 확인하고
+그리고 다음에 렌더링될 컴포넌트는 어떤지를 보고
+다른 부분만 파악을 한다.
+
+오로지 바뀐 부분만 업데이트 해준다.
