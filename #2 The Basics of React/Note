@@ -16,3 +16,43 @@ Babel 이란?
 JSX로 적은 코드를 브라우저가 이해할 수 있는 형태로 바꿔주는 것을 말한다.
 
 소위말해 브라우저가 sass를 이해할 수 없어서 sass => css로 변환해서 사용하는 것과 비슷한 느낌 인 것 같다.
+
+function Title() {
+    return (
+        <h3 id="title" onMouseEnter={() => console.log("mosuse enter"),
+            Hello I'm a title
+        </h3>}
+    );
+}
+
+ const Button = () => (
+        <button
+          style={{ backgroundColor: "tomato" }}
+          onClick={() => console.log("나 클릭됨")}
+        >
+          Click me
+        </button>
+);
+
+둘다 똑같은 형식이다.
+
+기억해야 할 것은
+
+컴포넌트를 사용할 때
+첫 글자는 반드시 대문자여야 한다는 것이다.
+
+만약 소문자면 React랑 JSX는
+HTML 태그라고 생각하기 때문에 반드시 대문자로 써야 한다.
+
+
+JSX는
+보다싶이 어플리케이션을 여러 가지
+작은 요소로 나누어 관리할 수 있게 해준다.
+
+div에 const 넣기 위해선
+1. const를 함수로 만들어 줘야함 const Btn = () => ( );
+-> arrow function 이라고 부름
+= () => ( ); 는 function Btn() { return ( ); } 와 같음
+2. HTML 태그처럼 만들어서 넣어줌
+3. (중요) 컴포넌트의 첫 글자는 반드시 대문자여야 함
+-> 우리가 직접 만든 요소는 전부 대문자로 시작해야 함
