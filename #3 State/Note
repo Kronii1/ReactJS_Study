@@ -1,30 +1,30 @@
-State 란?
-기본적으로 데이터가 저장되는 곳이다.
+React.useState()
+이 코드를 통해 얻게 되는 건
+[undefined,func] undefined와 함수 하나이다.
 
-변수를 JSX에게 전달하는 방법?
+undefined는 data를 나타내고
+func는 data를 바꿀 때 사용하는 함수이다.
 
-바닐라 JS ver
-span.innerText = `Total Click : ${counter}`
+React.useState()함수는
+초기값을 설정할 수 있다.
 
-JSX ver
-<h3>Total clicks : {counter}</h3>
+React.useState(0) 초기값을 주게 되면
+[0,func] 라는 배열 결과를 얻을 수 있다.
+
+기억해야되는건
+전에 했던 counter로 비유하면
+
+[0 = Counter라는 data,func = counter의 값을 바꾸는 함수]
+정도로 비유해보면 될 것 같다.
 
 
+✅ JavaScript가 가진 짧은 멋진 문법 코드 8:00 timestamp
+어떻게 하면 배열에서 요소들을 꺼내서 이름을 부여할 수 있을까?
 
+const food = ["tomato","potato"] 라는 배열이 있다고 가정해보자.
+여기서 배열값을 꺼내서 이름을 부여하려면
+const myFavFood = food[0]을 하면 되지만
 
-바닐라JS
-바닐라JS에서 HTML요소들을 검사해보면
-클릭 했을 때 구글 Chrome HTML 요소들이 업데이트가 되고 있는걸 바로 보여준다.
-
-
-ReactJS
-클릭 했을 때 HTML요소들이 업데이트 되지 않는다.
-React.Js는 UI에서 바뀐부분만 업데이트 해준다.
-바닐라JS와 달리 바뀐 부분만 업데이트를 해준다.
-
-ReactJS는
-이전에 렌더링된 컴포넌트는 어떤거였는지 확인하고
-그리고 다음에 렌더링될 컴포넌트는 어떤지를 보고
-다른 부분만 파악을 한다.
-
-오로지 바뀐 부분만 업데이트 해준다.
+조금만 손봐주면 짧게 써서 사용할 수 있는데
+const [myFavFood,mySecFavFood] = food
+이런식으로 써주면 각각 배열값에 변수명을 바로 넣어주고 값을 받을 수 있다.
