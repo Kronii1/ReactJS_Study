@@ -13,10 +13,16 @@
       const root = document.getElementById("root");
       const span = React.createElement(
         "span",
-        { id: "nice-span", style: { color: "red" } },
+        { onMouseEnter: () => console.log("mouse enter") },
         "Hello I'm a span"
       );
-      ReactDOM.render(span, root);
+      const btn = React.createElement(
+        "button",
+        { onClick: () => console.log("나 클릭됨") },
+        "Click me"
+      );
+      const div = React.createElement("div", null, [span, btn]);
+      ReactDOM.render(div, root);
     </script>
   </body>
 </html>
