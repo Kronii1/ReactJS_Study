@@ -1,25 +1,20 @@
-전에는 카운터가 업데이트될 때 마다
-render를 다시 호출해서 리렌더링을 했었는데
-예를 들어 파일이 많거나, 폼, 로그인, 알림 등등을 다룰 때
-계속 함수를 호출해주는건 힘들다.
+사용자들의 input을 어떻게 얻는지,
+form을 만들었을 때 state는 어떤식으로 작용하는지에 대해 배울거야.
 
-getElementByID하고, ReactDOM을 import하고, 최상위 컴포넌트를 import하고.. 별로인데
+state를 바꾸는 2가지 방법
+1. setModifer를 이용해서 우리가 원하는 값을 넣어주는 것이다.
+setModifer를 설정해서 새 값으로 변경해주는것.
 
-const [counter,modifier] = React.useState(0)에서
-modifier을 사용하여 업데이트(리렌더링)을 해보려고한다.
+2. 이전 값을 이용해서 현재 값을 계산해 내는 것이다.
+setModifer((current) => current + 1)
 
-modifier 함수는 값을 하나 받는데
-✅ 어떤 값을 부여하던 modifier 함수는 그 값으로 업데이트를 하고 리렌더링을 일으킨다.
+이게 현재 state를 기반으로 계산을 하는것이다.
+그래서 다음 state의 값이 현재 값을 바탕으로 나올수 있도록 하는것이다.
 
-이젠 const [counter, modifier] = React.useState(0) 단순히 이 한줄 코드로
-React.useState() 함수는 counter 같은 데이터를 숫자형 데이터로 건네줄거고
-그 데이터 값을 바꿀 modifier함수도 함께 줄것이다.
+정리하자면
 
-그리고 그 modifier 함수를 이용해서 데이터를 바꿨을 때, 데이터 값이 바뀌고
-컴포넌트도 동시에 리렌더링 된다.
+만약 우리가 현재 state를 바탕으로 다음 state를 계산해내고 싶다면,
+setModifer((current) => current + 1)식으로 함수를 사용해야된다.
 
-그래서 보통 사람들이 하는 방식은,
-데이터를 이름 붙일 때 counter처럼 원하는대로 붙이고
-modifier는 modifier가 아니라, set뒤에 데이터이름을 붙여준다.
-const [counter, setCounter] = React.useState(0);
-
+이게 현재 state인 현재 counter 값을 줄거고,
+예상치 못한 업데이트가 어디선가 일어났다고 해도, 그게 혼동을 주는걸 방지한다.
