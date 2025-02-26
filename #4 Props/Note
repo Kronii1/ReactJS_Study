@@ -1,20 +1,22 @@
-이번 강의에서는 props에 뭘 넣을 수 있는지에 대해 알아본다.
+Props Types
+어떤 타입의 prop을 받고 있는지 체크를 해준다.
 
-HTML요소에 onClick을 사용하면
-이벤트리스너로 써 사용이 되는것이고,
+Btn.propTypes = {
+    text: PropTypes.string,
+    fontSize: PropTypes.number,
+}
 
-✅ 컴포넌트 - JSX로 만들어진 함수
-React 컴포넌트에 onClick을 사용하면,
-이건 이벤트 리스너가 아니다.
-그저 하나의 "prop" 이다.
+prop들의 type이 어떻게 되는질 설명해준다.
 
-prop이 변하지 않는 한에서 우리는 컴퍼넌트를 리렌더링 시키지 않을 수 있다.
-바로 React.memo를 사용하면 된다
+컴포넌트가 확실한 prop들만을 정확히 갖고 render될 것을 확실하고싶으면
+required를 추가해주면 된다.
 
-사용법
-React.memo(상속받을 컴포넌트)
+Btn.propTypes = {
+    text: PropTypes.string.isRequired,
+    fontSize: PropTypes.number,
+}
 
-만약 부모 컴포넌트가 어떤 State라도 변경이 생기면
-모든 자식 컴포넌트는 리렌더링 된다.
+default value(기본값) 설정법
 
-이게 추후에 어플리케이션이 느려지는 이유이기도 하다.
+예시
+function Btn({text,fontSize = 14})

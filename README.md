@@ -14,3 +14,6 @@ This repository was created to study React 💙
 ✅ React
 
 ## 📌 참고한 리액트 문서
+
+PropTypes 공식 문서
+<https://legacy.reactjs.org/docs/typechecking-with-proptypes.html>
